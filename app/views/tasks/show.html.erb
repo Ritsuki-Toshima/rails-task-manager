@@ -1,7 +1,8 @@
 <div class="container">
   <h1><%= @task.title %></h1>
   <p class="card-body bg-light"><%= @task.details %></p>
-
+  <input type="checkbox" class="mb-4 ms-2" <%= @task.completed ? "checked" : "" %>>
+  <label for=""><%= @task.completed ? "This task is completed! F**k you!" : "This task is not completed yet! F**k you!" %></label><br>
   <%= link_to "Back to list", tasks_path, class: "btn btn-light mr-3" %>
-  <%= link_to "Edit this task", edit_task_path, class: "btn btn-light" %>
+  <%= link_to "Edit this task", edit_task_path, class: "btn btn-light ms-2" %>
 </div>
